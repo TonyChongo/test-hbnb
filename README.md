@@ -39,8 +39,8 @@ Inspired by Airbnb, the project allows users to register, list properties, write
 
 ### 1. Clone & Setup
 ```bash
-git clone https://github.com/yourusername/hbnb-flask.git
-cd hbnb-flask
+git clone https://github.com/yourusername/test-hbnb.git
+cd test-hbnb/part2
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
