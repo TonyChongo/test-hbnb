@@ -35,3 +35,10 @@ class Place(BaseModel):
         if not isinstance(amenity, Amenity):
             raise TypeError("Expected an Amenity instance.")
         self.amenities.append(amenity)
+
+    def to_dict(self):
+        data = super().to_dict()
+        data["owner"] = self.owner.id
+        data["amenities"] = [a.id for a in self.amenities]
+        data["reviews"] = [r.to_dict() for r in self.reviews]
+        return data
